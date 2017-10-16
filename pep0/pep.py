@@ -5,9 +5,7 @@ import re
 import sys
 import textwrap
 import unicodedata
-
 from email.parser import HeaderParser
-
 from . import constants
 
 

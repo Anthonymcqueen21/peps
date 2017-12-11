@@ -28,14 +28,13 @@ RUNTIME = 0x20    # track system run time - stops when system suspended
 SYNTHETIC = 0x40  # a synthetic clock, computed from other clocks
 
 def get_clock(flags=0, clocklist=None):
-    ''' Return a clock based on the supplied `flags`.
+   ''' Return a clock based on the supplied `flags`.
         The returned clock shall have all the requested flags.
         If no clock matches, return None.
-    '''
+   '''
     for clock in get_clocks(flags=flags, clocklist=clocklist):
       return clock
     return None
-
 def get_clocks(flags=0, clocklist=None):
     ''' Yield all clocks matching the supplied `flags`.
         The returned clocks shall have all the requested flags.
